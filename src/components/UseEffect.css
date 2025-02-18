@@ -1,0 +1,38 @@
+.kontajner
+{
+margin:1rem;
+padding:1rem;
+background-color:chartreuse;
+color:black;
+border:5px solid orange;
+}
+
+.flex
+{
+display:flex;
+flex-wrap:wrap;
+gap:2rem;
+}
+
+.flex div
+{
+background-color:azure;
+border-radius:5px;
+padding:.5rem;
+}
+
+.butt
+{
+color:black;
+border:none;
+background-color: aqua;
+border-radius:5px;
+font-size:1rem;
+cursor:pointer;
+}
+
+.akce
+{
+font-size:1.25rem;
+font-weight:bold;
+}

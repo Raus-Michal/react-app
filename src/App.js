@@ -5,12 +5,17 @@ import UseState from "./components/UseState"; // import komponenty UseState
 import WriteNames from "./components/WriteNames"; // komponenta umí vypsat name a description z pole objektů data, který je v souboru data/data.js
 import WriteNamesAndDeleteName from "./components/WriteNamesAndDeleteName"; // podobná komponenta jako WriteNames s tím rozdílem, že jednotlivé položky mají button na své vymazání
 import ButtonProps from "./components/ButtonProps"; // komponenta, která má v sobě button, který si nechal zaslat funkci z této App hlavní komponenty
+import UseEffect from "./components/UseEffect"; // komponetra rozšiřuje informace o nativní funkci reactu useEffect
+import TernarniOperator from "./components/TernarniOperator"; // pouze pomocí ternárního operátoru můžeme vkládat podmínku do části return v komponentě
+
 
 import { useEffect } from "react"; // importování nativní funkce react useEffect, tato funkce funguje tak, že jakmile se vyrendruje stránka spouští se vše co je ve funkci useEffect
 // pokud bych chtěl mít importováno v komponentě useState a zároveň useEffect bude zápis následující: import { useEffect, useState } from "react";
 
+
+
 import img1 from "./img/img-1.svg"; // import svg
-// import img2 from "./img/img-2.svg"; // import svg
+import img2 from "./img/img-2.svg"; // import svg
 import img3 from "./img/img-3.svg"; // import svg
 
 const App=()=>{
@@ -25,6 +30,7 @@ const p_useEffect=document.getElementById("input_useEffect"); // načte HTML ele
 
 if(input_useEffect&&p_useEffect)
 {
+// pokud HTML objekty existují
 let value_input=input_useEffect.value; // načte value input
 p_useEffect.innerText=value_input; // přepíše text HTML element P na value input type=text
 }
@@ -48,11 +54,11 @@ id:1,
 src:img1, // vloží importovaný img1
 title:"opice"
 },
-// {
-// id:2,
-// src:img2, // vloží importovaný img2
-// title:"slon"
-// },
+{
+id:2,
+src:img2, // vloží importovaný img2
+title:"slon"
+},
 {
 id:3,
 src:img3, // vloží importovaný img3
@@ -109,6 +115,12 @@ return (
 <div>
 <ButtonProps xxx={myAlert} /> {/* Pomocí props pošleme do komponenty ButtonProps funkci myAlert() */}
 </div>
+
+
+<UseEffect />
+
+
+<TernarniOperator />
 
 </div>
 );
