@@ -1,0 +1,17 @@
+.box-polozky
+{
+padding:1rem;
+margin:1rem;
+border:2px solid green;
+}
+
+.box-button button
+{
+padding:.5rem;
+margin:1rem;
+border:1px solid red;
+background-color:white;
+color:red;
+border-radius:8px;
+cursor:pointer;
+}
